@@ -1,6 +1,6 @@
 public class java19 {
-    String nombre = "Victor";
-    int edad = 29;
+    String nombre;
+    int edad;
 
     public java19(String nombre, int edad) {
         this.nombre = nombre;

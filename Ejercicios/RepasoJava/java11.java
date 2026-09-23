@@ -11,7 +11,7 @@ public class java11 {
         String diaSemana[] = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes"};
         System.out.println("Array diaSemana: " + Arrays.toString(diaSemana));
 
-double temperaturas[] = {20.5, 22.3, 19.8, 21.0, 23.1, 24.7, 18.9, 25.3, 27.1, 22.8};
+        double temperaturas[] = {20.5, 22.3, 19.8, 21.0, 23.1, 24.7, 18.9, 25.3, 27.1, 22.8};
         System.out.println("Array temperaturas: " + Arrays.toString(temperaturas));
     }
 }

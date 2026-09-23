@@ -12,36 +12,36 @@ A continuación se detallan los ejercicios disponibles en esta carpeta:
 
 * [**Ejercicio 5:**](../RepasoJava/java5.java "null") **Operadores de comparación**
 
-* [**Ejercicio 6:**](./Ejercicio6.java "null") **Incremento y decremento**
+* [**Ejercicio 6:**](../RepasoJava/java6.java "null") **Incremento y decremento**
 
-* [**Ejercicio 7:**](./Ejercicio7.java "null") **Clasificador de edad**
+* [**Ejercicio 7:**](../RepasoJava/java7.java "null") **Clasificador de edad**
 
-* [**Ejercicio 8:**](./Ejercicio8.java "null") **Día de la semana**
+* [**Ejercicio 8:**](../RepasoJava/java8.java "null") **Día de la semana**
 
-* [**Ejercicio 9:**](./Ejercicio9.java "null") **Tabla de multiplicar**
+* [**Ejercicio 9:**](../RepasoJava/java9.java "null") **Tabla de multiplicar**
 
-* [**Ejercicio 10:**](./Ejercicio10.java "null") **Contador de pares**
+* [**Ejercicio 10:**](../RepasoJava/java10.java "null") **Contador de pares**
 
-* [**Ejercicio 11:**](./Ejercicio11.java "null") **Declaracion e inicializacion**
+* [**Ejercicio 11:**](../RepasoJava/java11.java "null") **Declaracion e inicializacion**
 
-* [**Ejercicio 12:**](./Ejercicio12.java "null") **Suma de elementos**
+* [**Ejercicio 12:**](../RepasoJava/java12.java "null") **Suma de elementos**
 
-* [**Ejercicio 13:**](./Ejercicio13.java "null") **Busqueda de arrays**
+* [**Ejercicio 13:**](../RepasoJava/java13.java "null") **Busqueda de arrays**
 
-* [**Ejercicio 14:**](./Ejercicio14.java "null") **Array bidimensional**
+* [**Ejercicio 14:**](../RepasoJava/java14.java "null") **Array bidimensional**
 
-* [**Ejercicio 15:**](./Ejercicio15.java "null") **Método Saludo**
+* [**Ejercicio 15:**](../RepasoJava/java15.java "null") **Método Saludo**
 
-* [**Ejercicio 16:**](./Ejercicio16.java "null") **Calculadora con metodos**
+* [**Ejercicio 16:**](../RepasoJava/java16.java "null") **Calculadora con metodos**
 
-* [**Ejercicio 17:**](./Ejercicio17.java "null") **Método para array**
+* [**Ejercicio 17:**](../RepasoJava/java17.java "null") **Método para array**
 
-* [**Ejercicio 18:**](./Ejercicio18.java "null") **Método con validación**
+* [**Ejercicio 18:**](../RepasoJava/java18.java "null") **Método con validación**
 
-* [**Ejercicio 19:**](./Ejercicio19.java "null") **Clase persona**
+* [**Ejercicio 19:**](../RepasoJava/java19.java "null") **Clase persona**
 
-* [**Ejercicio 20:**](./Ejercicio20.java "null") **Clase rectangulo**
+* [**Ejercicio 20:**](../RepasoJava/java20.java "null") **Clase rectangulo**
 
-* [**Ejercicio 21:**](./Ejercicio21.java "null") **Usando las clases**
+* [**Ejercicio 21:**](../RepasoJava/java21.java "null") **Usando las clases**
 
-* [**Ejercicio 22:**](./Ejercicio22.java "null") **Proyecto final**
+* [**Ejercicio 22:**](../RepasoJava/java22.java "null") **Proyecto final**

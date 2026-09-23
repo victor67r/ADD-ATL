@@ -4,7 +4,7 @@ public class java11 {
 
     public static void main(String[] args) {
 
-        System.out.println("Ejercicio 11: DECLARACION E INICIALIZACION DE VARIABLES.");
+        System.out.println("Ejercicio 11: DECLARACION E INICIALIZACION.");
         int enteros[] = {1, 2, 3, 4, 5};
         System.out.println("Array enteros: " + Arrays.toString(enteros));
 

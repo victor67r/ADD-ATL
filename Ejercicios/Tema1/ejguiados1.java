@@ -6,7 +6,7 @@ public class ejguiados1 {
 
        //existe
        if (!fichero.exists()) {
-          fichero.mkdir()
+          fichero.mkdir();
        }
     }
 }

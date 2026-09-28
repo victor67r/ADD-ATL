@@ -6,7 +6,7 @@ public class ejguiados2 {
           File fichero = new File("./Ejercicios/Tema1/" + dia);
             //fichero.mkdir();
 
-            if (fichero.exists()) {
+            if (!fichero.exists()) {
                 fichero.mkdir();
             }
       }

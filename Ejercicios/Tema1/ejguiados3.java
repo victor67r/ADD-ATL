@@ -6,7 +6,6 @@ public class ejguiados3 {
           File origen = new File("./Ejercicios/Tema1/" + dia);
           File destino = new File("./Ejercicios/Tema1/cine_granada/" + dia);
           origen.renameTo(destino);
-            
       }
     }
 }

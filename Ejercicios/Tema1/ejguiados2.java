@@ -4,7 +4,13 @@ public class ejguiados2 {
       String dias [] = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
       for (String dia : dias) {
           File fichero = new File("./Ejercicios/Tema1/" + dia);
-            fichero.mkdir();
+            //fichero.mkdir();
+
+            if (fichero.exists()) {
+                fichero.mkdir();
+            }
       }
+
+
     }
 }

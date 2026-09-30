@@ -8,7 +8,7 @@ import java.io.RandomAccessFile;
 public class ejguiados10 {
     public static void main(String[] args) throws IOException{
         File archivo = new File("./Ejercicios/Tema1/cine_granada/Miércoles/sesiones.txt");
-        RandomAccessFile escritura = new RandomAccessFile(archivo, "rw");
+        RandomAccessFile escritura = new RandomAccessFile(archivo, "rws");
         escritura.writeBytes("Miércoles: Titanic (1998): 17:00 - 20:15.");
 
         escritura.seek("Titanic (...)".length());

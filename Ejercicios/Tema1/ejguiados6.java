@@ -2,6 +2,7 @@ import java.io.File;
 public class ejguiados6 {
     public static void main(String[] args) {
         File fichero= new File("./Ejercicios/Tema1/cine_granada");
+        System.out.println("Archivo creados con éxito.");
         //fichero.listFiles();
         if (fichero.exists()) {
             File [] ficheros = fichero.listFiles();

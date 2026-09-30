@@ -6,7 +6,7 @@ public class ejguidados7 {
         for (String dia : dias){
             File archivo = new File("./Ejercicios/Tema1/cine_granada/" + dia + "/sesiones.txt");
             archivo.createNewFile();
-
+            
         }
     }
 }

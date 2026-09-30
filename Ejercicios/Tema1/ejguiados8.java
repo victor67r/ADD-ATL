@@ -14,8 +14,9 @@ public class ejguiados8 {
         while ((i = lectura.read()) != -1) {
         System.out.print((char) i);
 }
-        
+        escritura.close();
         lectura.close();
+        
         
     }
 }

@@ -1,6 +1,7 @@
 package Practicas.PT1;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -44,10 +45,39 @@ public class PT1 {
 
                 case 1:
                     System.out.println("Crear usuario");
+                System.out.print("Introduce tu nombre: ");
+                String nombre = sc.next();
+
+                System.out.print("Introduce tu código: ");
+                String codigo = sc.next();
+
+                System.out.print("Introduce tu contraseña: ");
+                String password = sc.next();
+
+                User usuario = new User(nombre, codigo, password);
+
+                FileWriter escritor = new FileWriter(users, true);
+
+                escritor.write(usuario.getNombre() + ";"+ usuario.getCodigo() + ";"+ usuario.getPassword() + "\n");
+                escritor.close();
+
+                System.out.println("Usuario creado correctamente.");
+
                     break;
 
                 case 2:
                     System.out.println("Eliminar usuario");
+
+                    System.out.print("Introduce el código del usuario: ");
+                    String codigoEliminar = sc.next();
+
+                    Scanner lector = new Scanner(users);
+                    while (lector.hasNextLine()) {
+                    String linea = lector.nextLine();
+                    System.out.println(linea);
+                        }
+                    lector.close();
+
                     break;
 
                 case 3:

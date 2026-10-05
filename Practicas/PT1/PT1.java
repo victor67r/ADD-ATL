@@ -44,41 +44,84 @@ public class PT1 {
             switch (opcion) {
 
                 case 1:
-                    System.out.println("Crear usuario");
-                System.out.print("Introduce tu nombre: ");
-                String nombre = sc.next();
+            System.out.println("Crear usuario");
 
-                System.out.print("Introduce tu código: ");
-                String codigo = sc.next();
+            System.out.print("Introduce tu nombre: ");
+            String nombre = sc.next();
 
-                System.out.print("Introduce tu contraseña: ");
-                String password = sc.next();
+            String codigo;
+            int siguienteCodigo = 1;
+            boolean codigoOcupado = true;
 
-                User usuario = new User(nombre, codigo, password);
+            while (codigoOcupado) {
+            codigoOcupado = false;
 
-                FileWriter escritor = new FileWriter(users, true);
+            Scanner lectorUsuarios = new Scanner(users);
+            while (lectorUsuarios.hasNextLine()) {
 
-                escritor.write(usuario.getNombre() + ";"+ usuario.getCodigo() + ";"+ usuario.getPassword() + "\n");
-                escritor.close();
+            String linea = lectorUsuarios.nextLine();
+            String[] datos = linea.split(";");
 
-                System.out.println("Usuario creado correctamente.");
+            int codigoActual = Integer.parseInt(datos[1]);
 
-                    break;
+            if (codigoActual == siguienteCodigo) {
+                codigoOcupado = true;
+                siguienteCodigo++;
+            }
+        }
+
+        lectorUsuarios.close();
+    }
+
+            codigo = String.format("%03d", siguienteCodigo);
+
+            System.out.println("Tu código es: " + codigo);
+
+            System.out.print("Introduce tu contraseña: ");
+            String password = sc.next();
+            User usuario = new User(nombre, codigo, password);
+
+            FileWriter escritor = new FileWriter(users, true);
+
+            escritor.write(usuario.getNombre() + ";"
+            + usuario.getCodigo() + ";"
+            + usuario.getPassword() + "\n");
+
+             escritor.close();
+
+            System.out.println("Usuario creado correctamente.");
+
+            break;
 
                 case 2:
-                    System.out.println("Eliminar usuario");
+                System.out.println("Eliminar usuario");
 
-                    System.out.print("Introduce el código del usuario: ");
-                    String codigoEliminar = sc.next();
+                System.out.print("Introduce el código del usuario: ");
+                String codigoEliminar = sc.next();
 
-                    Scanner lector = new Scanner(users);
-                    while (lector.hasNextLine()) {
-                    String linea = lector.nextLine();
-                    System.out.println(linea);
-                        }
-                    lector.close();
+                Scanner lector = new Scanner(users);
 
-                    break;
+                String usuarios = "";
+                while (lector.hasNextLine()) {
+                String linea = lector.nextLine();
+
+                String[] datos = linea.split(";");
+
+                if (datos[1].equals(codigoEliminar)) {
+                System.out.println("Usuario encontrado");
+                }
+                if (!datos[1].equals(codigoEliminar)) {
+                usuarios += linea + "\n";
+                }
+                }
+        
+                lector.close();
+
+                FileWriter escritorEliminar = new FileWriter(users);
+                escritorEliminar.write(usuarios);
+                escritorEliminar.close();
+
+                break;
 
                 case 3:
                     System.out.println("Añadir review");

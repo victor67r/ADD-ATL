@@ -158,8 +158,14 @@ public class PT1 {
                 System.out.print("Introduce el nombre de la película: ");
                 String pelicula = sc.nextLine();
 
-                System.out.print("Introduce la calificación (1-10) (números enteros): ");
-                int calificacion = sc.nextInt();
+                
+                int calificacion;
+
+                do {
+                System.out.print("Introduce la calificación (1-10): (Números enteros)");
+                calificacion = sc.nextInt();
+                } 
+                while (calificacion < 1 || calificacion > 10);
 
                 //Guardamos la review aquí.
                 Review review = new Review(pelicula, calificacion);
@@ -177,17 +183,18 @@ public class PT1 {
                 break;
 
                 case 4:
-                    System.out.println("Mostrar review");
+                System.out.println("Mostrar reviews");
 
-                    System.out.print("Introduce el código del usuario: ");
-                    String codigoMostrar = sc.next();
+                System.out.print("Introduce el código del usuario: ");
+                String codigoMostrar = sc.next();
 
-                    Scanner lectorMostrar = new Scanner(users);
+                Scanner lectorMostrar = new Scanner(users);
 
-                    boolean usuarioEncontradoMostrar = false;
-                    String nombreUsuarioMostrar = "";
+                boolean usuarioEncontradoMostrar = false;
+                String nombreUsuarioMostrar = "";
 
-                    while (lectorMostrar.hasNextLine()) {
+                while (lectorMostrar.hasNextLine()) {
+
                     String linea = lectorMostrar.nextLine();
                     String[] datos = linea.split(";");
 
@@ -198,32 +205,42 @@ public class PT1 {
                     }
                 }
 
-                    lectorMostrar.close();
+                lectorMostrar.close();
 
-                    if (usuarioEncontradoMostrar) {
+                if (usuarioEncontradoMostrar) {
 
-                    System.out.println("Reviews de " + nombreUsuarioMostrar);
-                    File archivoReviewMostrar = new File(
-                            reviews,
-                            nombreUsuarioMostrar + "-" + codigoMostrar + ".txt"
-                    );
+                System.out.println("Reviews de " + nombreUsuarioMostrar);
 
-                    if (archivoReviewMostrar.exists()) {
-                        Scanner lectorReviews = new Scanner(archivoReviewMostrar);
+                File archivoReviewMostrar = new File(
+                        reviews,
+                        nombreUsuarioMostrar + "-" + codigoMostrar + ".txt"
+                );
 
-                        while (lectorReviews.hasNextLine()) {
+                if (archivoReviewMostrar.exists()) {
 
-                        String linea = lectorReviews.nextLine();
-                        String[] datosReview = linea.split(";");
+                    Scanner lectorReviews = new Scanner(archivoReviewMostrar);
 
-                        System.out.println("Película: " + datosReview[0]);
-                        System.out.println("Calificación: " + datosReview[1]);
-                        System.out.println();
+                    while (lectorReviews.hasNextLine()) {
 
-}
-                    }
+                    String linea = lectorReviews.nextLine();
+                    String[] datosReview = linea.split(";");
+
+                    System.out.println("Película: " + datosReview[0]);
+                    System.out.println("Calificación: " + datosReview[1]);
+                    System.out.println();
                 }
-                    break;
+
+                    lectorReviews.close();
+
+                    } else {
+                        System.out.println("Este usuario todavía no tiene reviews.");
+                    }
+
+                } else {
+                    System.out.println("No existe ningún usuario con ese código.");
+                }
+
+                break;
 
                 case 5:
                     System.out.println("Saliendo del programa...");

@@ -9,18 +9,19 @@ En este repositorio se almacenan los ejercicios, prácticas y proyectos realizad
 
 El objetivo de la asignatura es aprender a trabajar con diferentes formas de almacenamiento y acceso a la información desde aplicaciones.
 
-## 🛠️ Tecnologías
+## 🛠️ EJERCICIOS
 
-Durante la asignatura se trabajará principalmente con:
+La estructura básica de los ejercicios que entrego:
 
-* ☕ Java
-* 🐍 Python
-* 🗄️ Bases de datos
-* 💾 Ficheros
-* 🔗 JDBC
-* 🧩 ORM
-* 📄 XML / JSON
-* 🌐 APIs y servicios web
+EJERCICIOS:
+
+1. * [**Ejercicio 1: **] (./Ejercicios\Tema1)
+
+PRÁCTICAS: 
+
+1. * [**Práctica 1: **] (./Practicas\PT1)
+
+
 
 ## 📂 Estructura del repositorio
 

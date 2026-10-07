@@ -124,11 +124,105 @@ public class PT1 {
                 break;
 
                 case 3:
-                    System.out.println("Añadir review");
-                    break;
+                System.out.println("Añadir review");
+
+                System.out.print("Introduce el código del usuario: ");
+                String codigoReview = sc.next();
+
+                Scanner lectorReview = new Scanner(users);
+
+                boolean usuarioEncontrado = false;
+                String nombreUsuario = "";
+
+                while (lectorReview.hasNextLine()) {
+
+                    String linea = lectorReview.nextLine();
+                    String[] datos = linea.split(";");
+
+                    if (datos[1].equals(codigoReview)) {
+                        usuarioEncontrado = true;
+                        nombreUsuario = datos[0];
+                        break;
+                    }
+                }
+
+                lectorReview.close();
+
+                if (usuarioEncontrado) {
+
+                System.out.println("Usuario encontrado: " + nombreUsuario);
+
+
+                sc.nextLine();
+
+                System.out.print("Introduce el nombre de la película: ");
+                String pelicula = sc.nextLine();
+
+                System.out.print("Introduce la calificación (1-10) (números enteros): ");
+                int calificacion = sc.nextInt();
+
+                //Guardamos la review aquí.
+                Review review = new Review(pelicula, calificacion);
+                File archivoReview = new File(reviews, nombreUsuario + "-" + codigoReview + ".txt");
+
+                FileWriter escritorReview = new FileWriter(archivoReview, true);
+                escritorReview.write(review.getPelicula() + ";" + review.getCalificacion() + "\n");
+
+                escritorReview.close();
+
+            } else {
+                System.out.println("No existe ningún usuario con ese código.");
+            }
+
+                break;
 
                 case 4:
                     System.out.println("Mostrar review");
+
+                    System.out.print("Introduce el código del usuario: ");
+                    String codigoMostrar = sc.next();
+
+                    Scanner lectorMostrar = new Scanner(users);
+
+                    boolean usuarioEncontradoMostrar = false;
+                    String nombreUsuarioMostrar = "";
+
+                    while (lectorMostrar.hasNextLine()) {
+                    String linea = lectorMostrar.nextLine();
+                    String[] datos = linea.split(";");
+
+                    if (datos[1].equals(codigoMostrar)) {
+                        usuarioEncontradoMostrar = true;
+                        nombreUsuarioMostrar = datos[0];
+                        break;
+                    }
+                }
+
+                    lectorMostrar.close();
+
+                    if (usuarioEncontradoMostrar) {
+
+                    System.out.println("Reviews de " + nombreUsuarioMostrar);
+                    File archivoReviewMostrar = new File(
+                            reviews,
+                            nombreUsuarioMostrar + "-" + codigoMostrar + ".txt"
+                    );
+
+                    if (archivoReviewMostrar.exists()) {
+                        Scanner lectorReviews = new Scanner(archivoReviewMostrar);
+
+                        while (lectorReviews.hasNextLine()) {
+
+                        String linea = lectorReviews.nextLine();
+                        String[] datosReview = linea.split(";");
+
+                        System.out.println("Película: " + datosReview[0]);
+                        System.out.println("Calificación: " + datosReview[1]);
+                        System.out.println();
+
+}
+                    }
+                }
                     break;
 
                 case 5:

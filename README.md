@@ -15,11 +15,11 @@ La estructura básica de los ejercicios que entrego:
 
 EJERCICIOS:
 
-1. * [**Ejercicio 1: **] (./Ejercicios\Tema1)
+1. [**Ejercicio 1**](./Ejercicios/Tema1)
 
-PRÁCTICAS: 
+PRACTICAS:
 
-1. * [**Práctica 1: **] (./Practicas\PT1)
+1. [**Práctica 1**](./Practicas/PT1)
 
 
 

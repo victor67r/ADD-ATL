@@ -5,22 +5,7 @@ Repositorio correspondiente a la asignatura **Acceso a Datos (ADD)** del ciclo d
 
 ## 📖 Descripción
 
-En este repositorio se almacenan los ejercicios, prácticas y proyectos realizados durante la asignatura de **Acceso a Datos**.
-
-El objetivo de la asignatura es aprender a trabajar con diferentes formas de almacenamiento y acceso a la información desde aplicaciones.
-
-## 🛠️ EJERCICIOS
-
-La estructura básica de los ejercicios que entrego:
-
-EJERCICIOS:
-
-1. [**Ejercicio 1**](./Ejercicios/Tema1)
-
-PRACTICAS:
-
-1. [**Práctica 1**](./Practicas/PT1)
-
+Aqui puedes acceder a los ejercicios y prácticas realizados durante la asignatura de **Acceso a Datos**.
 
 
 ## 📂 Estructura del repositorio
@@ -43,17 +28,23 @@ ADD-ATL/
 └── README.md
 ```
 
-> La estructura del repositorio podrá modificarse a medida que avance la asignatura.
 
-## 🎯 Objetivos
+## 🛠️ EJERCICIOS
 
-* Comprender diferentes sistemas de almacenamiento de datos.
-* Aprender a acceder y modificar datos desde una aplicación.
-* Trabajar con bases de datos relacionales.
-* Utilizar consultas SQL.
-* Gestionar ficheros y diferentes formatos de información.
-* Conocer herramientas y técnicas para la persistencia de datos.
-* Desarrollar aplicaciones capaces de almacenar y recuperar información.
+La estructura básica de los ejercicios que entrego:
+
+EJERCICIOS:
+
+1. [**Ejercicio 1**](./Ejercicios/Tema1)
+
+PRACTICAS:
+
+1. [**Práctica 1**](./Practicas/PT1)
+
+
+
+
+
 
 ## 📌 Contenido
 

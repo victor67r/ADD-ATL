@@ -97,3 +97,14 @@ Por ejemplo, si se escribe primero un número entero con `writeInt()` y después
 **2. Lectura en un orden diferente (resultado incorrecto)**
 
 ![DataInputStream leyendo los datos en otro orden](imagenes/hola7.png)
+
+
+### ¿Qué pasa si intentas leer más bytes de los disponibles?
+
+Si intentamos leer más bytes de los que hay disponibles, Java puede lanzar una excepción `EOFException`.
+
+Por ejemplo, si escribimos un solo byte con `write(65)` e intentamos leer un número entero con `readInt()`, se producirá una excepción porque `readInt()` necesita 4 bytes y solo hay 1 disponible.
+
+### Captura de la ejecución
+
+![Excepción EOFException al intentar leer más bytes de los disponibles](imagenes/hola8.png)

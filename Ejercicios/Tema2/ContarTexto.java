@@ -19,13 +19,14 @@ public class ContarTexto {
         FileReader archivo = new FileReader(ruta);
         StreamTokenizer tokenizer = new StreamTokenizer(archivo);
 
-        int token;
+        while (tokenizer.nextToken() != StreamTokenizer.TT_EOF) {
 
-        while ((token = tokenizer.nextToken()) != StreamTokenizer.TT_EOF) {
-
-            if (token == StreamTokenizer.TT_WORD) {
+            if (tokenizer.ttype == StreamTokenizer.TT_WORD) {
+                System.out.println("Palabra: " + tokenizer.sval);
                 palabras++;
-            } else if (token == StreamTokenizer.TT_NUMBER) {
+
+            } else if (tokenizer.ttype == StreamTokenizer.TT_NUMBER) {
+                System.out.println("Número: " + tokenizer.nval);
                 numeros++;
             }
         }

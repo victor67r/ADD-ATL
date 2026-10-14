@@ -76,7 +76,7 @@ El programa utiliza `StreamTokenizer` para contar las palabras y los números, y
 
 ### Captura de la ejecución
 
-![Captura de la ejecución del programa](imagenes/hola5.png)
+![Captura de la ejecución del programa](imagenes/hola9.png)
 
 ## Ejercicio 4: DataInputStream
 

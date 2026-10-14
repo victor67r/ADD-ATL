@@ -19,3 +19,19 @@ El método `unread()` permite introducir un carácter en el búfer de retroceso 
 Sin embargo, si el búfer está lleno y se intenta introducir otro carácter, se producirá una excepción `IOException`.
 
 ![Prueba del método unread()](imagenes/hola2.png)
+
+# 2. PipedInputStream y PipedOutputStream
+
+## ¿Qué ocurre si intentas leer antes de que se haya escrito nada?
+
+Si intentamos leer de un `PipedInputStream` antes de que se haya escrito ningún dato, el método `read()` se queda bloqueado esperando a que haya información disponible. Cuando otro hilo escribe datos en el `PipedOutputStream` conectado, la lectura continúa y recibe esos datos.
+
+Por tanto, la lectura no devuelve inmediatamente un resultado vacío, sino que espera hasta que haya datos disponibles o se produzca alguna condición que provoque una excepción.
+
+![Captura de lectura antes de escribir datos](imagenes/hola3.png)
+
+## ¿Se puede conectar un PipedInputStream con varios PipedOutputStream?
+
+No. Un `PipedInputStream` solo puede estar conectado a un `PipedOutputStream` a la vez. Si intentamos conectar un segundo `PipedOutputStream` al mismo flujo de entrada cuando ya está conectado, se producirá una excepción `IOException`.
+
+![Captura de conexión de varios flujos](imagenes/hola4.png)

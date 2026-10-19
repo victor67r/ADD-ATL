@@ -56,8 +56,6 @@ public class parseadordom {
 
                 // 2.6 Convertir el nodo a Element
                 Element elemento = (Element) nodo;
-
-                // Mostrar el atributo rollno
                 System.out.println("Student Roll no: " + elemento.getAttribute("rollno"));
 
                 // 2.7 Mostrar los datos del estudiante

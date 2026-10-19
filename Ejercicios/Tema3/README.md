@@ -10,6 +10,8 @@ Lectura y procesamiento de un archivo XML en Java utilizando DOM y XPath.
 
 Capturas del código de `parseadordom.java`.
 
+![Captura de la ejecución del programa](imagenes/hola333.png)
+
 ## Resultado
 
-Captura de la ejecución del programa.
+![Captura de la ejecución del programa](imagenes/hola322.png)

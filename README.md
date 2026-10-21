@@ -37,6 +37,7 @@ EJERCICIOS:
 
 1. [**Ejercicio 1**](./Ejercicios/Tema1)
 2. [**Ejercicio 2**](./Ejercicios/Tema2)
+3. [**Ejercicio 3**](./Ejercicios/Tema3)
 
 PRACTICAS:
 

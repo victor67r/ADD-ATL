@@ -19,3 +19,6 @@
 ## 5. Mostrar precio medio global (SAX)
 
 ![Captura de la ejecución del programa](imagenes/dom5.png)
+
+## 6. Terminal
+![Captura de la ejecución del programa](imagenes/dom6.png)

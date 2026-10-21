@@ -13,7 +13,8 @@ public class GestorProductosXML1 {
             switch (opcion) {
                 case 1 -> DOMManager1.mostrarProductos();
                 case 2 -> DOMManager1.agregarProducto();
-                //case 3 -> DOMManager1.incrementarPreciosPorCategoria();
+                case 3 -> DOMManager1.incrementarPreciosPorCategoria();
+                case 4 -> SAXManager1.generarInformeStockPorCategoria();
                 
                 case 0 -> System.out.println("Saliendo del programa...");
                 default -> System.out.println("Opción incorrecta. Intente de nuevo.");

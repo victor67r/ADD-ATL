@@ -123,6 +123,64 @@ public static void agregarProducto() {
     }
 }
 
+public static void incrementarPreciosPorCategoria() {
+    Scanner sc = new Scanner(System.in);
+
+    try {
+        Document doc = cargarDocumento();
+
+        // 1. Solicitar la categoría al usuario
+        System.out.println("Introduce la categoría:");
+        String categoria = sc.nextLine();
+
+        // 2. Recorrer los productos
+        NodeList productos = doc.getElementsByTagName("producto");
+
+        for (int i = 0; i < productos.getLength(); i++) {
+            Element producto = (Element) productos.item(i);
+
+            // Obtener la categoría del producto
+            String categoriaProducto = producto
+                    .getElementsByTagName("categoria")
+                    .item(0)
+                    .getTextContent();
+
+            // Comprobar si coincide con la categoría introducida
+            if (categoriaProducto.equalsIgnoreCase(categoria)) {
+
+                // Obtener el precio
+                Element nodoPrecio = (Element) producto
+                        .getElementsByTagName("precio")
+                        .item(0);
+
+                double precio = Double.parseDouble(
+                        nodoPrecio.getTextContent()
+                );
+
+                // Incrementar el precio un 10 %
+                precio = precio * 1.10;
+
+                // Actualizar el precio en el XML
+                nodoPrecio.setTextContent(
+                        String.format(java.util.Locale.US, "%.2f", precio)
+                );
+            }
+        }
+
+        // 3. Guardar los cambios en el archivo actualizado
+        guardarDocumento(doc, "productos_actualizados.xml");
+
+        System.out.println(
+                "Precios actualizados para la categoría: " + categoria
+        );
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+
+
     private static Document cargarDocumento() throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();

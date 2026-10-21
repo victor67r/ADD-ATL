@@ -9,8 +9,10 @@
 3. Incrementar precios de una categoría (DOM)
 ![Captura de la ejecución del programa](imagenes/dom3.png)
 
+
 4. Generar informe de stock por categoría (SAX)
 ![Captura de la ejecución del programa](imagenes/dom4.png)
+
 
 5. Mostrar precio medio global (SAX)
 ![Captura de la ejecución del programa](imagenes/dom5.png)

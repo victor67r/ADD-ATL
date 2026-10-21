@@ -1,5 +1,6 @@
 # Práctica DOM y XPath
 
+
 1. Mostrar todos los productos (DOM)
 ![Captura de la ejecución del programa](imagenes/dom1.png)
 
@@ -18,3 +19,4 @@
 
 5. Mostrar precio medio global (SAX)
 ![Captura de la ejecución del programa](imagenes/dom5.png)
+
